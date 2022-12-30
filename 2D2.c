@@ -3,8 +3,9 @@ main(){
 	
 	int m ;
 	int N;
-	int a[m][N];
+	
 	int r,c ;
+	int length =0;
 	
 	printf("Enter Value of m:");
 	scanf("%d",&m);
@@ -12,10 +13,10 @@ main(){
 	printf("Enter Value of N:");
 	scanf("%d",&N);
 
+	int a[m][N];
 	
-	
-	for(r=0; r<=m; r++){
-		for(c=0; c<=N; c++){
+	for(r=0; r<m; r++){
+		for(c=0; c<N; c++){
 			
 			printf("Enter Value of [%d][%d]:",r,c);
 			scanf("%d",&a[r][c]);
@@ -23,18 +24,18 @@ main(){
 	}
 	
 	
-	for(r=0; r<=m; r++){
-		for(c=0; c<=N; c++){
+	for(r=0; r<m; r++){
+		for(c=0; c<N; c++){
 			
 		
 			printf("%d",a[r][c]);
 		}
 		
-		
+		printf("\n");
 	}
-	printf("\n");
-	printf("ROW= %d\n",m );
-	printf("COLUMN= %d\n",N);
+	
+	length = sizeof(a[r][c])/sizeof(int);
+	printf("%d",length);
 
 	
 }
